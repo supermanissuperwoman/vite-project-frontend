@@ -13,6 +13,10 @@ const routes = [
     path: "/index",
     component: () => import("../views/index/VInex.vue"),
   },
+  {
+    path: "/index2",
+    component: () => import("../views/index2/VIndex2.vue"),
+  },
 ];
 const router = createRouter({
   history: createWebHashHistory(),

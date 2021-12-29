@@ -5,7 +5,7 @@
         <el-input v-model="formData.username"></el-input>
       </el-form-item>
       <el-form-item label="密码"
-        ><el-input v-model="formData.password"></el-input
+        ><el-input type="password" v-model="formData.password"></el-input
       ></el-form-item>
       <el-form-item>
         <el-button @click="handleLogin">登录</el-button>
@@ -36,7 +36,7 @@ const handleLogin = async () => {
     console.log(2);
     const res = await login(data.formData.username, data.formData.password);
     console.log(res);
-    if (res.status == 200 && res.data.message == "success") {
+    if (res.status == 200 && res.data.resultMessage == "success") {
       router.push("/index");
     }
   }
